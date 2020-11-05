@@ -82,9 +82,9 @@ class MyApplication(pygubu.TkApplication):
             raise ValueError("Screen Resolution was not given correctly. Use no spaces and only a single 'x'.")
         # self.tab_width_frac = 888/1440 * self.screen_res[1] / self.screen_res[0] # Not actually used in the end.
         # from same experiments, stash starts 22 pixels away from edge, or 22/1440 fraction of screen width, and top is 215/1440 fraction.
-        self.tab_origin = 22/1440 * self.screen_res[1], 215/1440 * self.screen_res[1]
+        self.tab_origin = 22/1440 * self.screen_res[1], 169/1440 * self.screen_res[1]   
         # apply similar rules to ending coordinates  -notaspy 14-9-2020
-        self.tab_end = 864/1440 * self.screen_res[1], 1057/1440 * self.screen_res[1]
+        self.tab_end = 864/1440 * self.screen_res[1],  1013/1440 * self.screen_res[1]
         # scale the size of a stash tab box depending on if it is quad or not.
         # TODO: currently set by user, but can actually get this from the site request
         if self.config['Config']['quad_tab'].lower() == 'true':
